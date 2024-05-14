@@ -1,1 +1,1 @@
-two(S1,R1,S2,R2,S3,R3,S4,R4,S5,R5) :- R1 = R2, R3 = R4.
+greater(X, Y, no) :- minimum(X, Y, Z), X = Z.
