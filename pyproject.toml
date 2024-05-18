@@ -2,7 +2,7 @@
 name = "fol_parser"
 version = "0.2.0"
 description = "FOL Parser"
-authors = ["Emre Kuru emre.kuru@ozu.edu.tr"]
+authors = ["Emre Kuru <emre.kuru@ozu.edu.tr>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
