@@ -7,7 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pandas = "^2.2.2"
+antlr4-python3-runtime = "^4.13.1"
+graphviz = "^0.20.3"
 
 [tool.poetry.dev-dependencies]
 
@@ -23,7 +24,7 @@ download_antlr = "curl -O https://www.antlr.org/download/antlr-4.9.2-complete.ja
 antlr_gen = "java -jar antlr-4.9.2-complete.jar -Dlanguage=Python3 -o FOL.g4"
 clean = "rm -rf generated/*"
 
-# nsures ANTLR JAR is downloaded before generating the parser
+# Ensures ANTLR JAR is downloaded before generating the parser
 antlr = [
     "poe download_antlr",
     "poe antlr_gen"
