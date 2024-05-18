@@ -2,4 +2,10 @@
 venv/
 poetry.lock
 tools/
-ANTLR/
+ANTLR/FOL.interp      
+ANTLR/FOL.tokens      
+ANTLR/FOLLexer.interp 
+ANTLR/FOLLexer.py     
+ANTLR/FOLLexer.tokens 
+ANTLR/FOLListener.py  
+ANTLR/FOLParser.py
