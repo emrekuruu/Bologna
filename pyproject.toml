@@ -23,9 +23,10 @@ build-backend = "poetry.core.masonry.api"
 download_antlr = "curl -O https://www.antlr.org/download/antlr-4.9.2-complete.jar"
 antlr_gen = "java -jar antlr-4.9.2-complete.jar -Dlanguage=Python3 -o FOL.g4"
 clean = "rm -rf generated/*"
+update_lock = "poetry lock"
 
 # Ensures ANTLR JAR is downloaded before generating the parser
 antlr = [
-    "poe download_antlr",
-    "poe antlr_gen"
+    "download_antlr",
+    "antlr_gen"
 ]
