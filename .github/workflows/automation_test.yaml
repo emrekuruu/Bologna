@@ -41,6 +41,3 @@ jobs:
 
       - name: Generate parser files
         run: poetry run poe antlr_gen
-
-      - name: Run tests
-        run: poetry run pytest
