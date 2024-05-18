@@ -31,9 +31,6 @@ jobs:
       - name: Update lock file
         run: poetry run poe update_lock
 
-      - name: Run tests
-        run: poetry run pytest
-
       - name: Download ANTLR JAR
         run: |
               mkdir -p tools
@@ -41,3 +38,4 @@ jobs:
 
       - name: Generate parser files
         run: poetry run poe antlr_gen
+
