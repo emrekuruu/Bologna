@@ -1,7 +1,7 @@
 import sys
 from antlr4 import *
-from ANTLR.PrologLexer import PrologLexer
-from ANTLR.PrologParser import PrologParser
+from ANTLR.FOLLexer import FOLLexer
+from ANTLR.FOLParser import FOLParser
 from antlr4.tree.Tree import ParseTreeWalker
 from antlr4.tree.Trees import Trees
 from graphviz import Digraph
@@ -18,16 +18,16 @@ def add_nodes_edges(t, dot, parser):
 
 def main():
     input_stream = FileStream("test.pl") 
-    lexer = PrologLexer(input_stream)
+    lexer = FOLLexer(input_stream)
     stream = CommonTokenStream(lexer)
-    parser = PrologParser(stream)
+    parser = FOLParser(stream)
     
     tree = parser.p_text()
     print(tree.toStringTree(recog=parser))
 
-    dot = Digraph(comment='Prolog Parse Tree')
+    dot = Digraph(comment='Parse Tree')
     add_nodes_edges(tree, dot, parser)
-    dot.render('graphs/parse_tree.gv', view=True)  # Saves and opens the file
+    dot.render('graphs/parse_tree.gv', view=True)  
 
 if __name__ == "__main__":
     main()

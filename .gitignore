@@ -1,6 +1,5 @@
 /.DS_Store
 venv/
-poetry.lock
 tools/
 ANTLR/FOL.interp      
 ANTLR/FOL.tokens      
@@ -9,3 +8,5 @@ ANTLR/FOLLexer.py
 ANTLR/FOLLexer.tokens 
 ANTLR/FOLListener.py  
 ANTLR/FOLParser.py
+ANTLR/.antlr
+ANTLR/__pycache__

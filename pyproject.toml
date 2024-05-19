@@ -21,8 +21,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
 create_tools_dir = "mkdir -p tools"
-download_antlr_jar = "curl -o tools/antlr-4.9.2-complete.jar https://www.antlr.org/download/antlr-4.9.2-complete.jar"
-rename_antlr_jar = "mv tools/antlr-4.9.2-complete.jar tools/antlr.jar"
+download_antlr_jar = "curl -o tools/antlr-4.13.1-complete.jar https://www.antlr.org/download/antlr-4.13.1-complete.jar"
+rename_antlr_jar = "mv tools/antlr-4.13.1-complete.jar tools/antlr.jar"
 antlr_gen = "java -jar tools/antlr.jar -Dlanguage=Python3 ANTLR/FOL.g4"
 clean = "rm -rf generated/*"
 update_lock = "poetry lock"
