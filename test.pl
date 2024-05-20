@@ -1,1 +1,0 @@
-greater(X, Y, no) :- minimum(X, Y, Z), X = Z.

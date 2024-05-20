@@ -1,9 +1,13 @@
 [tool.poetry]
 name = "fol_parser"
-version = "0.2.0"
+version = "0.6.0"
 description = "FOL Parser"
 authors = ["Emre Kuru <emre.kuru@ozu.edu.tr>"]
 readme = "README.md"
+
+packages = [
+    { include = "fol_parser" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
