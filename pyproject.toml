@@ -24,10 +24,10 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
-create_tools_dir = "mkdir -p tools"
-download_antlr_jar = "curl -o tools/antlr-4.13.1-complete.jar https://www.antlr.org/download/antlr-4.13.1-complete.jar"
-rename_antlr_jar = "mv tools/antlr-4.13.1-complete.jar tools/antlr.jar"
-antlr_gen = "java -jar tools/antlr.jar -Dlanguage=Python3 ANTLR/FOL.g4"
+create_tools_dir = "mkdir -p fol_parser/tools"
+download_antlr_jar = "curl -o fol_parser/tools/antlr-4.13.1-complete.jar https://www.antlr.org/download/antlr-4.13.1-complete.jar"
+rename_antlr_jar = "mv fol_parser/tools/antlr-4.13.1-complete.jar fol_parser/tools/antlr.jar"
+antlr_gen = "java -jar fol_parser/tools/antlr.jar -Dlanguage=Python3 fol_parser/ANTLR/FOL.g4"
 clean = "rm -rf generated/*"
 update_lock = "poetry lock"
 
@@ -37,3 +37,4 @@ antlr = [
     "rename_antlr_jar",
     "antlr_gen"
 ]
+
